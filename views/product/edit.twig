@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editar Producto</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/products">Lista de Productos</a></h3>
+            <h1>Editar Productos</h1>
+            <form action="/products/update/{{ product._id }}" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>ID</td>
+                            <td><input type="text" name="id" value="{{ product.id }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" name="name" value="{{ product.name }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Precio</td>
+                            <td><input type="text" name="price" value="{{ product.price }}" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">Update</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

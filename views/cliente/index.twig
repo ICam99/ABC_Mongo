@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de Clientes</title>
+    </head>
+    <body>
+        <div class="container">
+        <h3><a href="/clientes/create">Crear Cliente</a></h3>
+        <h1>Lista de Clientes</h1>
+            {% if clientes is not empty %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cliente in clientes %}
+                        <tr>
+                            <td>{{ cliente.id }}</td>
+                            <td><a href="/clientes/show/{{ cliente._id }}">{{ cliente.name }}</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <div>No customers found.</div>
+            {% endif %}
+        </div>
+    </body>
+</html>

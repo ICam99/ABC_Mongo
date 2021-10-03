@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detalles de Clientes</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/clientes">Lista de Clientes</a></h3>
+            <h1>Detalles de Cliente</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>ID</td>
+                        <td>{{ cliente.id }}</td>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>{{ cliente.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3><a href="/clientes/edit/{{ cliente._id }}">EDITAR</a></h3>
+            <form action="/clientes/delete/{{ cliente._id }}" method="post">
+                <button type="submit">BORRAR</button>
+            </form>
+        </div>
+    </body>
+</html>

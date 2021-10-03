@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crear Cliente</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/clientes">Lista de Clientes</a></h3>
+            <h1>Crear un Nuevo Cliente</h1>
+            <form action="/clientes/save" method="post">
+                <table>
+                    <tbody>
+						<tr>
+                            <td>ID</td>
+                            <td><input type="text" name="id" /></td>
+                        </tr>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" name="name" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Save" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

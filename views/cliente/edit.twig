@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editar Cliente</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/clientes">Lista de Clientes</a></h3>
+            <h1>Editar Clientes</h1>
+            <form action="/clientes/update/{{ cliente._id }}" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>ID</td>
+                            <td><input type="text" name="id" value="{{ cliente.id }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" name="name" value="{{ cliente.name }}" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">Update</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
